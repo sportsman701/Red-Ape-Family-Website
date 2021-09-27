@@ -10,3 +10,13 @@
     }
 
 }
+
+.bg-gradient{
+    background: linear-gradient(0deg, rgba(14,19,25,1) 0%, rgba(53,19,60,0) 100%);
+}
+
+.banner-banana{
+    background-image: url('../../media/bananasbanner.png');
+    background-size:contain;
+    background-position:center;
+}
