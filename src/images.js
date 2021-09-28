@@ -1,21 +1,32 @@
-export const baseURL = "https://drive.google.com/uc?export=view&id=";
+import titleImgPng from 'media/logo.png';
+import logoPng from 'media/logonavbar.png';
+import clapperPng from 'media/clapper.png';
+import member1Png from 'media/member1.png';
+import member2Png from 'media/member2.png';
+import member3Png from 'media/member3.png';
+import cast1Png from 'media/cast1.png';
+import cast2Png from 'media/cast2.png';
+import cast3Png from 'media/cast3.png';
+import cast4Png from 'media/cast4.png';
+import cast5Png from 'media/cast5.png';
+import cast6Png from 'media/cast6.png';
+import cast7Png from 'media/cast7.png';
 
-export const cloudsBanner = "1hqK9CVahOsLUDIyB5ol-7sE5YsUV92qT";
-export const titleImg = "1KMi47qmUYsoVpX5ZG2bAwzvkDH4Gvdns";
-export const logo = "1Jt7g55Rirmnwyzls4zKKnpNNq67qSsLi";
+export const titleImg = titleImgPng;
+export const logo = logoPng;
 
-export const movie = "1iuGc9AUbLtqnppSlkfH1WamdWcrWKYBW";
+export const movie = clapperPng;
 
 //team members
-export const member1 = "1gPD2QmGXErRHAe_uLW63mgESGGZrt2JW";
-export const member2 = "1sxE_XkLueJLAlBXsJdBK4ubJliC-LtOF";
-export const member3 = "173uJliPojtJJpEQNkGq2qtPrDm1iNzA7";
+export const member1 = member1Png;
+export const member2 = member2Png;
+export const member3 = member3Png;
 
 //team cast
-export const ape1 = "1iEAbqtQQy-n1Jv33gQuozZWdhouDpG7Q";
-export const ape2 = "1o1m_7TvcT63TuaMCjlziURiTkmPwGVDH";
-export const ape3 = "1ITuyZCJK9jC-ypNqLaYIn-81l4AAPOrs";
-export const ape4 = "1EuhngC5DjjYKLka3FdqNvjlFymNS1nIk";
-export const ape5 = "1lyZxN5Uj0Xr2TrOO3Q1C0NjNqpxH9OdV";
-export const ape6 = "190qnv13_P_1hceVCBwqcRuTIYcFMo_He";
-export const ape7 = "1VxQfjuyGK6zFOfoIpj01J2JrxgQSsZCu";
+export const ape1 = cast1Png;
+export const ape2 = cast2Png;
+export const ape3 = cast3Png;
+export const ape4 = cast4Png;
+export const ape5 = cast5Png;
+export const ape6 = cast6Png;
+export const ape7 = cast7Png;

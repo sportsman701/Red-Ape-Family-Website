@@ -2,7 +2,7 @@ import Navbar from 'components/commons/navbar';
 import Footer from 'components/commons/footer';
 
 import {
-    baseURL,
+
     cloudsBanner,
     titleImg,
     movie
@@ -29,7 +29,7 @@ const HomePage = props => {
                     <div className="container">
                         <div className="columns is-variable is-8">
                             <div className="column">
-                                <img src={baseURL+titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
+                                <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
                                 <h1 className="subtitle has-text-white">The Red Ape Family is a 2D animated sitcom that brings 4 bored apes to life an imaginary city and an imaginary world!</h1>
                                 <button className="button is-info is-rounded">FAQ</button>&nbsp;&nbsp;&nbsp;
                                 <button className="button is-info is-rounded">Roadmap</button>&nbsp;&nbsp;&nbsp;
@@ -50,6 +50,17 @@ const HomePage = props => {
             <section className="banner-banana py-6">
                 <div className="container">
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">Mint</strong></h1>
+                    <div className="box mint-panel">
+                        <h1 className="subtitle"></h1>
+                        <form>
+                            <div className="has-text-centered" >
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Text input"/>
+                                </div>
+                                <button className="button is-info is-rounded" type="submit">MINT</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
 
@@ -65,7 +76,7 @@ const HomePage = props => {
                                     <div className="columns is-mobile is-vcentered">
                                         <div className="column is-1" style={{maxWidth: '40px'}}>
                                             <figure className="image is-24x24">
-                                                <img src={baseURL+movie} alt=""/>
+                                                <img src={movie} alt=""/>
                                             </figure>
                                         </div>
                                         <div className="column">

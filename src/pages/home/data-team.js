@@ -1,5 +1,4 @@
 import {
-    baseURL,
     member1,
     member2,
     member3
@@ -7,17 +6,17 @@ import {
 
 const team = [
     {
-        imageurl: baseURL+member1,
+        imageurl: member1,
         name: 'BlessedSon',
         charge: 'Executive Producer',
         socialMedia: '@theblessedson17'
     }, {
-        imageurl: baseURL+member2,
+        imageurl: member2,
         name: 'Hashem Zaini',
         charge: 'Director',
         socialMedia: '@HashemZaini'
     }, {
-        imageurl: baseURL+member3,
+        imageurl: member3,
         name: 'Zaini Media',
         charge: 'Animation Studio',
         socialMedia: 'www.zainimedia.com'

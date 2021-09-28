@@ -1,5 +1,4 @@
 import {
-    baseURL,
     logo
 } from 'images';
 
@@ -9,7 +8,7 @@ const Navbar = props => {
             <div className="container">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="https://bulma.io">
-                      <img src={baseURL+logo} alt="" width="32" />
+                      <img src={logo} alt="" width="32" />
                     </a>
 
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

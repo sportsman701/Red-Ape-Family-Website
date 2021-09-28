@@ -1,5 +1,5 @@
 .banner-home{
-    background-image: url('https://drive.google.com/uc?export=view&id=1hqK9CVahOsLUDIyB5ol-7sE5YsUV92qT');
+    background-image: url('../../media/clouds.png');
     background-size:contain;
     background-position:center;
 }
@@ -16,7 +16,12 @@
 }
 
 .banner-banana{
-    background-image: url('../../media/bananasbanner.png');
+    background-image: url('../../media/bananas.png');
     background-size:contain;
     background-position:center;
+}
+
+.mint-panel{
+    background: rgba(white, 0.1) !important;
+    backdrop-filter: blur(8px);
 }

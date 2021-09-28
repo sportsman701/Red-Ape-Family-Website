@@ -15,7 +15,7 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                
+                {/*}<Redirect to="/home" from="/"/>*/}
                 <Route exact path="/home">
                     <HomePage/>
                 </Route>

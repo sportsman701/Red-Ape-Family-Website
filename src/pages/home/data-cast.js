@@ -1,5 +1,4 @@
 import {
-    baseURL,
     ape1,
     ape2,
     ape3,
@@ -11,37 +10,37 @@ import {
 
 const cast = [
     {
-        imageurl: baseURL + ape1,
+        imageurl: ape1,
         name: "Chunky",
         discord: "BAYC #6614",
         role: "TRAF Father"
     }, {
-        imageurl: baseURL + ape2,
+        imageurl: ape2,
         name: "Winky",
         discord: "BAYC #6408",
         role: "TRAF Mother"
     }, {
-        imageurl: baseURL + ape3,
+        imageurl: ape3,
         name: "Ceasar",
         discord: "BAYC #9463",
         role: "TRAF 1st Twin"
     }, {
-        imageurl: baseURL + ape4,
+        imageurl: ape4,
         name: "Hunky",
         discord: "BAYC #6614",
         role: "TRAF Father"
     }, {
-        imageurl: baseURL + ape5,
+        imageurl: ape5,
         name: "Rocky",
         discord: "BAYC #6614",
         role: "TRAF Father"
     }, {
-        imageurl: baseURL + ape6,
+        imageurl: ape6,
         name: "Sheila",
         discord: "BAYC #7549",
         role: "TRAF Neighbor"
     }, {
-        imageurl: baseURL + ape7,
+        imageurl: ape7,
         name: "Hector",
         discord: "BAYC #7667",
         role: "TRAF Neighbor"
