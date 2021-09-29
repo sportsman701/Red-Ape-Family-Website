@@ -1,7 +1,10 @@
 import {
     member1,
     member2,
-    member3
+    member3,
+    member4,
+    member5,
+    member6
 } from 'images';
 
 const team = [
@@ -20,7 +23,23 @@ const team = [
         name: 'Zaini Media',
         charge: 'Animation Studio',
         socialMedia: 'www.zainimedia.com'
+    }, {
+        imageurl: member4,
+        name: 'Neil Jacques',
+        charge: '',
+        socialMedia: ''
+    }, {
+        imageurl: member5,
+        name: 'Century Gothic',
+        charge: '',
+        socialMedia: ''
+    }, {
+        imageurl: member6,
+        name: 'Don Fuego',
+        charge: '',
+        socialMedia: '@donfuego.beats'
     }
 ];
+
 
 export default team;

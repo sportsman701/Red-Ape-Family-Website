@@ -41,7 +41,6 @@ const HomePage = props => {
                                 <figure class="image is-16by9">
                                     <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BKkc2v8echI" frameborder="0" allowfullscreen></iframe>
                                 </figure>
-                                <h1 className="subtitle has-text-white">Teaser - coming soon!!</h1>
                             </div>
                         </div>
                     </div>
@@ -50,9 +49,8 @@ const HomePage = props => {
 
             {/* mint section*/}
             <section className="banner-banana py-6">
-                <div className="container">
-                    <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">Mint</strong></h1>
-                    <div className="box mint-panel">
+                <div className="container">                    
+                    <div className="">
                         <h1 className="subtitle"></h1>
                         <Form/>
                     </div>

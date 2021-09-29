@@ -5,6 +5,12 @@ import {
 } from '../constants';
 
 const defaultState = {
+    MINT_TX: {
+        loading: false,
+        error: false,
+        success: false,
+        resData: {}
+    },
     genericTx: {
         loading: false,
         error: false,
@@ -31,7 +37,8 @@ const reducer = (state = defaultState, action) => {
                 [action.txType]: {
                     loading: false,
                     error: true,
-                    success: false
+                    success: false,
+                    resData: action.payload
                 }
             };
 
@@ -41,7 +48,8 @@ const reducer = (state = defaultState, action) => {
                     [action.txType]: {
                         loading: false,
                         error: false,
-                        success: true
+                        success: true,
+                        resData: action.payload
                     }
                 };
 

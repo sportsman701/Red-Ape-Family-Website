@@ -1,7 +1,9 @@
 .banner-home{
-    background-image: url('../../media/clouds.png');
-    background-size:contain;
+    background-image: url('../../media/banner_homepage.png');
+    
     background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .roadmap-list{
@@ -19,6 +21,7 @@
     background-image: url('../../media/bananas.png');
     background-size:contain;
     background-position:center;
+
 }
 
 .mint-panel{

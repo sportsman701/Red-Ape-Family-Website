@@ -4,6 +4,9 @@ import clapperPng from 'media/clapper.png';
 import member1Png from 'media/member1.png';
 import member2Png from 'media/member2.png';
 import member3Png from 'media/member3.png';
+import member4Png from 'media/member4.png';
+import member5Png from 'media/member5.png';
+import member6Png from 'media/member6.png';
 import cast1Png from 'media/cast1.png';
 import cast2Png from 'media/cast2.png';
 import cast3Png from 'media/cast3.png';
@@ -21,6 +24,9 @@ export const movie = clapperPng;
 export const member1 = member1Png;
 export const member2 = member2Png;
 export const member3 = member3Png;
+export const member4 = member4Png;
+export const member5 = member5Png;
+export const member6 = member6Png;
 
 //team cast
 export const ape1 = cast1Png;

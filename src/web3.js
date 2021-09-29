@@ -4,7 +4,8 @@ import {
     set_metamask_installed,
     set_connection,
     set_current_account,
-    set_networkd_id
+    set_networkd_id,
+    check_connected_to_operating_network
 } from 'redux/actions/walletActions';
 
 import Web3 from 'web3';
@@ -40,7 +41,7 @@ const initWeb3 = async () => {
         const bscId = '97';
 
         //instance contracts
-        const ercContract = new web3.eth.Contract(ERCABI, '0x75bdE1Dc153367fC48AA86D7833a650E9d88975F');
+        const ercContract = new web3.eth.Contract(ERCABI, '0xE090DCC3216710F5ebCb361625bD67332fC71532');
         store.dispatch( add_contract(`ERC_CONTRACT`, ercContract) );
 
 
@@ -77,6 +78,7 @@ const initWeb3 = async () => {
         ethereum.on('chainChanged', async chainId => {
              // window.location.reload();
             store.dispatch( set_networkd_id( await web3.eth.getChainId() ) );
+            store.dispatch( check_connected_to_operating_network() );
         });
 
     }
