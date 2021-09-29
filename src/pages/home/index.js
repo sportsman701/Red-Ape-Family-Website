@@ -1,6 +1,7 @@
 import Navbar from 'components/commons/navbar';
 import Footer from 'components/commons/footer';
 
+
 import {
 
     cloudsBanner,
@@ -15,6 +16,7 @@ import castData from './data-cast';
 import faqData from './data-faq';
 
 import ReactHtml from 'raw-html-react';
+import Form from './form';
 
 import './home.scss';
 
@@ -37,7 +39,7 @@ const HomePage = props => {
                             </div>
                             <div className="column">
                                 <figure class="image is-16by9">
-                                    <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+                                    <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BKkc2v8echI" frameborder="0" allowfullscreen></iframe>
                                 </figure>
                                 <h1 className="subtitle has-text-white">Teaser - coming soon!!</h1>
                             </div>
@@ -52,14 +54,7 @@ const HomePage = props => {
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">Mint</strong></h1>
                     <div className="box mint-panel">
                         <h1 className="subtitle"></h1>
-                        <form>
-                            <div className="has-text-centered" >
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="Text input"/>
-                                </div>
-                                <button className="button is-info is-rounded" type="submit">MINT</button>
-                            </div>
-                        </form>
+                        <Form/>
                     </div>
                 </div>
             </section>

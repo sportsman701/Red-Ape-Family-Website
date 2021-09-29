@@ -2,6 +2,8 @@ import {
     logo
 } from 'images';
 
+import ConnectButton from 'components/connect-btn';
+
 const Navbar = props => {
     return(
         <nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
@@ -53,6 +55,10 @@ const Navbar = props => {
                                 <i class="fab fa-youtube"></i>
                             </span>
                         </a>
+                    </div>
+
+                    <div className="navbar-item">
+                        <ConnectButton/>
                     </div>
                 </div>
                 </div>
