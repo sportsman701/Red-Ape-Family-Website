@@ -41,14 +41,14 @@ const initWeb3 = async () => {
         const bscId = '97';
 
         //instance contracts
-        const ercContract = new web3.eth.Contract(ERCABI, '0xE090DCC3216710F5ebCb361625bD67332fC71532');
+        const ercContract = new web3.eth.Contract(ERCABI, '0xe02E18D4E4EDfACd1b7237c33051aD9514aD61dB');
         store.dispatch( add_contract(`ERC_CONTRACT`, ercContract) );
 
 
 
         //listen to eth change events
         ethereum.on('accountsChanged', accounts => {
-            console.log('accounts: ' + accounts);
+            // console.log('accounts: ' + accounts);
             if(accounts.length > 0){
                 store.dispatch( set_current_account(accounts[0]) );
             }

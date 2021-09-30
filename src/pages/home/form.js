@@ -12,7 +12,7 @@ const Form = props => {
     const [webData, setWebData] = useState(null);
     // console.log(webData);
     const erc_contract = props.web3Reducer.contracts['ERC_CONTRACT'];
-    console.log(props.wallet.con);
+//console.log(props.wallet.con);
     useEffect(
         () => {
             props.check_connected_to_operating_network();
@@ -30,6 +30,7 @@ const Form = props => {
             getWebData();
         }, [props.wallet.currentAccount]
     );
+
 
     const getWebData = async () => {
         if(props.wallet.connectedToOperatingNetwork){
@@ -76,6 +77,14 @@ const Form = props => {
         },
     });
 
+    useEffect(
+        () => {
+            getWebData();
+            formik.setFieldValue("mintQuantity", 1);
+        }, [props.txReducer.MINT_TX.success]
+    );
+
+
     const onIncreaseClicked = e => {
         if(webData == null) return;
 
@@ -105,22 +114,27 @@ const Form = props => {
                 <br/>
 
                 {
-                    props.wallet.connectedToOperatingNetwork ?
-                        <div>
-                            {
-                                webData == null ?
-                                    null
-                                :
-                                    <h1 className="subtitle">Your mints: {webData.userMints}</h1>
-                            }
-                            <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={!(webData && webData.mintsLeft > 0) || Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
-                            <button className="button is-info is-rounded" type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
-                            <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={!(webData && webData.mintsLeft > 0) || Number(formik.values.mintQuantity) == 5}>+</button>
-                        </div>
-                    :
-                        <button type="button" className="button is-info" onClick={e => props.request_change_network(4)}>
-                            Switch to ETH Mainnet
-                        </button>
+                    props.wallet.currentAccount ? (
+                        props.wallet.connectedToOperatingNetwork ?
+                            <div>
+                                {
+                                    webData == null ?
+                                        null
+                                    :
+                                        <h1 className="subtitle">Your mints: {webData.userMints}</h1>
+                                }
+                                <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
+                                <button className={`button is-info is-rounded ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
+                                <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
+                            </div>
+                        :
+                            <button type="button" className="button is-info" onClick={e => props.request_change_network(4)}>
+                                Switch to ETH Mainnet
+                            </button>
+                    ) : (
+                        <div>To start minting please connect the app to your wallet</div>
+                    )
+
                 }
 
                 <div>{(webData && webData.mintsLeft == 0) ? 'You have reached the minting limit for this episode! Thank you so much!' : ''}</div>
@@ -142,7 +156,8 @@ const Form = props => {
 
 const mapStateToProps = state => ({
     wallet: state.walletReducer,
-    web3Reducer: state.web3Reducer
+    web3Reducer: state.web3Reducer,
+    txReducer: state.txReducer
 });
 export default connect(
     mapStateToProps,

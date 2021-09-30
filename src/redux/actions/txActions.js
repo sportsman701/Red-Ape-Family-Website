@@ -40,17 +40,17 @@ export const start_minting_tx = txData => {
         const {contracts} = web3Reducer;
 
         const erc_contract = web3Reducer.contracts['ERC_CONTRACT'];
-
-        const tx = await erc_contract.methods._mint( walletReducer.currentAccount, txData.episodeId.toString(), txData.amount.toString() );
+        // console.log(erc_contract.methods);
+        const tx = await erc_contract.methods._mint( walletReducer.currentAccount, txData.amount.toString() );
 
         try {
             await tx.send({
                 from: walletReducer.currentAccount,
                 value: txData.value
             });
-            // dispatch( tx_success( txs.TRANSFER_REGULAR_TKN ) );
+            dispatch( tx_success( 'MINT_TX' ) );
         } catch (e) {
-            // dispatch( tx_failed( txs.TRANSFER_REGULAR_TKN ) );
+            dispatch( tx_failed( 'MINT_TX' ) );
             console.log(e);
         }
         finally{
