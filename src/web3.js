@@ -41,7 +41,7 @@ const initWeb3 = async () => {
         const bscId = '97';
 
         //instance contracts
-        const ercContract = new web3.eth.Contract(ERCABI, '0xe02E18D4E4EDfACd1b7237c33051aD9514aD61dB');
+        const ercContract = new web3.eth.Contract(ERCABI, '0x2a2F2196656A4c0D10b3279aea884066f68Cc904');
         store.dispatch( add_contract(`ERC_CONTRACT`, ercContract) );
 
 

@@ -31,3 +31,5 @@ export const SET_TOKEN_IS_L2 = 'SET_TOKEN_IS_L2';
 
 export const ADD_USER_TOKEN = 'ADD_USER_TOKEN';
 export const REMOVE_USER_TOKEN = 'REMOVE_USER_TOKEN';
+
+export const SET_SECTION = 'SET_SECTION';

@@ -1,6 +1,6 @@
+import {useEffect, useRef} from 'react';
 import Navbar from 'components/commons/navbar';
 import Footer from 'components/commons/footer';
-
 
 import {
 
@@ -18,24 +18,70 @@ import faqData from './data-faq';
 import ReactHtml from 'raw-html-react';
 import Form from './form';
 
+import {connect} from 'react-redux';
+import {set_section} from 'redux/actions/navbarActions';
+
 import './home.scss';
 
 
 
 const HomePage = props => {
+
+    const homeSection = useRef(null);
+    const faqSection = useRef(null);
+    const roadMapSection = useRef(null);
+    const teamSection = useRef(null);
+
+    const {navbarReducer} = props;
+
+
+    useEffect(
+        () => {
+            let y = 0;
+            switch (navbarReducer.section) {
+                case "HOME":
+                    y = homeSection.current.scrollIntoView()
+                    break;
+
+                case "FAQ":
+                    y = faqSection.current.scrollIntoView()
+                    window.scrollBy(0, -45);
+                    break;
+
+                case "ROADMAP":
+                    y = roadMapSection.current.scrollIntoView()
+                    window.scrollBy(0, -45);
+                    break;
+
+                case "TEAM":
+                    y = teamSection.current.scrollIntoView()
+                    window.scrollBy(0, -45);
+                    break;
+
+
+
+                default: break;
+
+            }
+            // console.log(y);
+        }, [navbarReducer.section]
+    );
+
     return (
         <div>
             <Navbar/>
-            <section className="hero banner-home">
+            <section className="hero banner-home" ref={homeSection}>
                 <div className="hero-body bg-gradient">
                     <div className="container">
-                        <div className="columns is-variable is-8">
+                        <div className="columns is-vecentered  px-3">
                             <div className="column">
+
                                 <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
-                                <h1 className="subtitle has-text-white">The Red Ape Family is a 2D animated sitcom that brings 4 bored apes to life an imaginary city and an imaginary world!</h1>
-                                <button className="button is-info is-rounded">FAQ</button>&nbsp;&nbsp;&nbsp;
-                                <button className="button is-info is-rounded">Roadmap</button>&nbsp;&nbsp;&nbsp;
-                                <button className="button is-info is-rounded">Subscribe</button>
+
+                                <h1 className="subtitle has-text-white">The Red Ape Family is a 2D animated sitcom that brings 4 Bored Apes to life an imaginary city and an imaginary world!</h1>
+                                <button className="button is-info is-rounded" onClick={e => props.set_section("FAQ")}>FAQ</button>&nbsp;&nbsp;&nbsp;
+                                <button className="button is-info is-rounded" onClick={e => props.set_section("ROADMAP")}>Roadmap</button>&nbsp;&nbsp;&nbsp;
+
                             </div>
                             <div className="column">
                                 <figure class="image is-16by9">
@@ -49,7 +95,7 @@ const HomePage = props => {
 
             {/* mint section*/}
             <section className="banner-banana py-6">
-                <div className="container">                    
+                <div className="container">
                     <div className="">
                         <h1 className="subtitle"></h1>
                         <Form/>
@@ -58,7 +104,7 @@ const HomePage = props => {
             </section>
 
             {/*roadmap*/}
-            <section className="has-background-dark px-4">
+            <section className="has-background-dark px-4" ref={roadMapSection}>
                 <div className="container py-6 px-4">
                     <h1 className="subtitle has-text-white">ROADMAP 1.0</h1>
 
@@ -86,17 +132,18 @@ const HomePage = props => {
             </section>
 
             {/*tokenomics*/}
-            <section className="banner-banana px-4">
+            <section className="banner-banana px-4" ref={faqSection}>
                 <div className="container py-6">
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">NFTs, Tokenomics, and Tiers</strong></h1>
-                    <div style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                        <h1 className="title has-background-info has-text-white px-6 py-2" style={{"border-radius": '50px'}}>FAQ</h1>
+                    <div className="pb-6" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
+                        <h1 className="title is-4 has-background-info has-text-white px-6 py-2 " style={{"border-radius": '50px'}}>FAQ</h1>
                     </div>
+                    <br/><br/>
                     <ul>
                         {
                             faqData.map( (f, i) =>
                                 <li className="mb-6" key={i}>
-                                    <h1 className="title is-4 mb-2">{f.question}</h1>
+                                    <h1 className="title is-5 mb-2">{f.question}</h1>
                                     <p><ReactHtml html={f.answer}/></p>
                                 </li>
                             )
@@ -107,11 +154,11 @@ const HomePage = props => {
             </section>
 
             {/* team */}
-            <section className="has-background-dark px-4">
+            <section className="has-background-dark px-4" ref={teamSection}>
                 <div className="container py-6">
                     <h1 className="subtitle has-text-white">TRAF TEAM - Our Team if from all over the world!</h1>
 
-                    <div className="columns">
+                    <div className="columns px-3">
                         {
                             teamData.map( (t, i) =>
                                 <div className="column has-text-centered" key={i}>
@@ -125,11 +172,8 @@ const HomePage = props => {
                                 </div>
                             )
                         }
-                    </div>
+                    </div>                    
 
-                    <br/>
-                    <h1 className="has-text-white is-size-4">Script Writers: Chris Goward & Neils </h1>
-                    <h1 className="has-text-white is-size-4">Musician: Matt Weocjomarts </h1>
                 </div>
             </section>
 
@@ -157,4 +201,13 @@ const HomePage = props => {
     );
 }
 
-export default HomePage;
+const mapStateToProps = state => ({
+    navbarReducer: state.navbarReducer
+});
+
+export default connect(
+    mapStateToProps,
+    {
+        set_section
+    }
+)(HomePage);

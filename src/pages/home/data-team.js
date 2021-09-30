@@ -26,17 +26,17 @@ const team = [
     }, {
         imageurl: member4,
         name: 'Neil Jacques',
-        charge: '',
-        socialMedia: ''
+        charge: 'Script Writer',
+        socialMedia: '@neil_erik'
     }, {
         imageurl: member5,
-        name: 'Century Gothic',
-        charge: '',
-        socialMedia: ''
+        name: 'Chris Gowardc',
+        charge: 'Script Writer',
+        socialMedia: '@chris_goward'
     }, {
         imageurl: member6,
         name: 'Don Fuego',
-        charge: '',
+        charge: 'Music Producer',
         socialMedia: '@donfuego.beats'
     }
 ];

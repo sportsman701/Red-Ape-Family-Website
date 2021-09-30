@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import {connect} from 'react-redux';
-import {request_change_network, check_connected_to_operating_network} from 'redux/actions/walletActions';
+import {request_change_network, check_connected_to_operating_network, request_connection} from 'redux/actions/walletActions';
 import {start_minting_tx} from 'redux/actions/txActions';
 
 
@@ -132,7 +132,9 @@ const Form = props => {
                                 Switch to ETH Mainnet
                             </button>
                     ) : (
-                        <div>To start minting please connect the app to your wallet</div>
+                        <button type="button" className="button is-info" onClick={async e => await props.request_connection()}>
+                            Connect to wallet
+                        </button>
                     )
 
                 }
@@ -163,6 +165,8 @@ export default connect(
     mapStateToProps,
     {
         request_change_network,
+        request_connection,
+        
         check_connected_to_operating_network,
         start_minting_tx
     }

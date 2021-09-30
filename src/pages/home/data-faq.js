@@ -72,23 +72,23 @@ const faq = [
     }, {
         question: "10. IP and Commercial rights? Tell me more!", //14
         answer: "A TRAF token is similar to a sports card or a trading card in video form. When you buy an NFT of an episode, you don’t own the intellectual property rights nor the commercial rights of the episode or of what the episode contains. Buying a TRAF token doesn't give the owner copyright ownership of the video or ownership of the TRAF characters or TRAF logos."
-    }, {
-        question: "11. What do you have in the TRAF Roadmap?", //15
-        answer: "Roadmap Season 1 <br/>" +
-        "- After Ep1: Poster NFTs can be claimed by NFT holders after the release of every episode. <br/>" +
-        "- After Ep2: A surprise for our holders! <br/>" +
-        "- After Ep4: Another surprise for our holders! <br/>" +
-        "- Ep5: Rarity introduction! <br/>" +
-        "- After Ep6: Opening of the TRAF Merch shop! <br/>" +
-        "- After Ep9: Sandbox and CryptoVoxels land will be purchased for TRAF Cinema. <br/>" +
-        "- After Ep10: 2 awesome end-of-the-season surprises for all the token holders. <br/><br/>" +
+    },// }, {
+        // question: "11. What do you have in the TRAF Roadmap?", //15
+        // answer: "Roadmap Season 1 <br/>" +
+        // "- After Ep1: Poster NFTs can be claimed by NFT holders after the release of every episode. <br/>" +
+        // "- After Ep2: A surprise for our holders! <br/>" +
+        // "- After Ep4: Another surprise for our holders! <br/>" +
+        // "- Ep5: Rarity introduction! <br/>" +
+        // "- After Ep6: Opening of the TRAF Merch shop! <br/>" +
+        // "- After Ep9: Sandbox and CryptoVoxels land will be purchased for TRAF Cinema. <br/>" +
+        // "- After Ep10: 2 awesome end-of-the-season surprises for all the token holders. <br/><br/>" +
+        //
+        // "As soon as Season 1 is completed, we will roll-out the roadmap of Season 2. <br/>"
 
-        "As soon as Season 1 is completed, we will roll-out the roadmap of Season 2. <br/>"
-
-    }, {
-        question: "12. What is Season 1's timeline?", //16
+    {
+        question: "11. What is Season 1's timeline?", //16
         answer: "We will start with a Teaser by the end of September, and right after that, we will start the release of season 1: <br/>" +
-        "- Ep1 - 2nd/3rd week of November <br/>" +
+        "- Ep1 - 23rd of November <br/>" +
         "- Ep2 - 2nd/3rd week of December <br/>" +
         "- Ep3 - 2nd/3rd week of January <br/>" +
         "- Ep4 - 2nd/3rd week of February <br/>" +
@@ -99,14 +99,14 @@ const faq = [
         "- Ep9 - 2nd/3rd week of July <br/>" +
         "- Ep10 - 2nd/3rd week of August <br/>"
     }, {
-        question: "13. How many TRAF NFTs are there?", //17
-        answer: "Each episode will have 100 tokens only."
+        question: "12. How many TRAF NFTs are there?", //17
+        answer: "Each episode will have 333 tokens only."
     },
     {
-        question: "14. How much does a TRAF NFT cost?", //18
-        answer: "Each episode will have 100 tokens only."
+        question: "13. How much does a TRAF NFT cost?", //18
+        answer: "Episode NFT = 0.95 ETH"
     }, {
-        question: "15. How do I purchase a TRAF NFT?", //20
+        question: "14. How do I purchase a TRAF NFT?", //20
         answer: "In order to purchase a TRAF NFT, you will need to purchase ETH From a cryptocurrency exchange like Coinbase or Binance and transfer that ETH into a non-custodial digital wallet like MetaMask. There are many digital wallet options, but you should probably use Metamask to start your NFT journee. <br/>" +
 
         "Here is a step-by-step guide to help. <br/>" +
