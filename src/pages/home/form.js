@@ -51,7 +51,7 @@ const Form = props => {
             setWebData(null);
         }
     }
-
+    // console.log(webData);
 
 
     const validationSchema = Yup.object().shape({
@@ -166,7 +166,7 @@ export default connect(
     {
         request_change_network,
         request_connection,
-        
+
         check_connected_to_operating_network,
         start_minting_tx
     }

@@ -43,10 +43,13 @@ export const start_minting_tx = txData => {
         // console.log(erc_contract.methods);
         const tx = await erc_contract.methods._mint( walletReducer.currentAccount, txData.amount.toString() );
 
+        console.log(txData.value);
+
         try {
             await tx.send({
                 from: walletReducer.currentAccount,
-                value: txData.value
+                value: txData.value,
+                gas: 100000
             });
             dispatch( tx_success( 'MINT_TX' ) );
         } catch (e) {

@@ -37,7 +37,7 @@ export const set_connection = value => {
 }
 
 
-const OPERATING_NETWORK = 4;
+const OPERATING_NETWORK = 1;
 const set_connected_to_operating_network = value => {
     return{
         type: SET_CONNECTED_TO_OPERATING_NETWORK,
@@ -97,7 +97,7 @@ export const check_connected_to_operating_network = () => {
     return (dispatch, getState) => {
 
         const currentNetworkId = getState().walletReducer.networkId;
-        
+
         dispatch( set_connected_to_operating_network( currentNetworkId == OPERATING_NETWORK ) );
     }
 }
