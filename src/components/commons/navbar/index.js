@@ -48,8 +48,8 @@ const Navbar = props => {
 
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <a class="is-size-4">
-                            <span className="icon has-text-white">
+                        <a class="is-size-4" href="https://twitter.com/TheRedApeFamilay" target="_blank">
+                            <span className="icon has-text-white" >
                                 <i class="fab fa-twitter"></i>
                             </span>
                         </a>

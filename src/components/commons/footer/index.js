@@ -4,7 +4,7 @@ const footer = props => {
             <div class="container has-text-centered">
 
                 <p>
-                    <a>
+                    <a href="https://twitter.com/TheRedApeFamily" target="_blank">
                         <span className="icon has-text-white is-size-4">
                             <i class="fab fa-twitter"></i>
                         </span>
@@ -16,7 +16,7 @@ const footer = props => {
                         </span>
                     </a>
                     &nbsp;&nbsp;
-                    <a  href="https://discord.gg/76n76gXSTg" target="_blank"> 
+                    <a  href="https://discord.gg/76n76gXSTg" target="_blank">
                         <span className="icon has-text-white is-size-4">
                             <i class="fab fa-discord"></i>
                         </span>
