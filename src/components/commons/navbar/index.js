@@ -7,6 +7,8 @@ import ConnectButton from 'components/connect-btn';
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
 
+import './navbar.scss';
+
 const Navbar = props => {
     return(
         <nav class="navbar has-background-black is-fixed-top" role="navigation" aria-label="main navigation">
@@ -53,12 +55,20 @@ const Navbar = props => {
                         </a>
                     </div>
                     <div class="navbar-item">
-                        <a class="is-size-4">
+                        <a class="is-size-4" href="https://www.youtube.com/channel/UCLCsACZQEeKOzjfbK2kIo9A" target="_blank">
                             <span className="icon has-text-white">
                                 <i class="fab fa-youtube"></i>
                             </span>
                         </a>
                     </div>
+                    <div class="navbar-item">
+                        <a class="is-size-4" href="https://discord.gg/76n76gXSTg" target="_blank">
+                            <span className="icon has-text-white">
+                                <i class="fab fa-discord"></i>
+                            </span>
+                        </a>
+                    </div>
+
 
                     <div className="navbar-item">
                         <ConnectButton/>
