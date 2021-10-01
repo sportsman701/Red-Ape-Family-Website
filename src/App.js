@@ -17,7 +17,10 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                {/*}<Redirect to="/home" from="/"/>*/}
+                <Route exact path="/">
+                    <Redirect to="/home"/>
+                </Route>
+
                 <Route exact path="/home">
                     <HomePage/>
                 </Route>
