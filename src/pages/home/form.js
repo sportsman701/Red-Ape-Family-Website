@@ -121,14 +121,17 @@ const Form = props => {
                                     webData == null ?
                                         null
                                     :
-                                        <h1 className="subtitle">Your mints: {webData.userMints}</h1>
+                                        <div className="mb-4">
+                                            <h1 className="subtitle mb-0">Your mints: {webData.userMints}</h1>
+                                            <small> NFT's left: {webData.leftNFT}</small>
+                                        </div>
                                 }
                                 <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
                                 <button className={`button is-info is-rounded ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
                                 <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
                             </div>
                         :
-                            <button type="button" className="button is-info" onClick={e => props.request_change_network(4)}>
+                            <button type="button" className="button is-info" onClick={e => props.request_change_network(1)}>
                                 Switch to ETH Mainnet
                             </button>
                     ) : (
