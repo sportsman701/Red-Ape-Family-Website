@@ -84,9 +84,7 @@ const HomePage = props => {
 
                             </div>
                             <div className="column">
-                                <figure class="image is-16by9">
-                                    <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BKkc2v8echI" frameborder="0" allowfullscreen></iframe>
-                                </figure>
+
                             </div>
                         </div>
                     </div>
@@ -96,6 +94,17 @@ const HomePage = props => {
             {/* mint section*/}
             <section className="banner-banana py-6">
                 <div className="container">
+                    <div className="">
+                        <div className="columns">
+                            <div className="column is-half is-offset-one-quarter">
+                                <figure class="image is-16by9">
+                                    <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BKkc2v8echI" frameborder="0" allowfullscreen></iframe>
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <div className="">
                         <h1 className="subtitle"></h1>
                         <Form/>
@@ -172,7 +181,7 @@ const HomePage = props => {
                                 </div>
                             )
                         }
-                    </div>                    
+                    </div>
 
                 </div>
             </section>

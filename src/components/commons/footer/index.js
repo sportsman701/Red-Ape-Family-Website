@@ -22,8 +22,7 @@ const footer = props => {
                         </span>
                     </a>
 
-                    <hr className="has-background-white"/>
-                    <h1 className="subtitle has-text-white mb-0">Contact us</h1>
+                    <hr className="has-background-white"/>                    
                 </p>
                 <br/>
                 <h1 className="subtitle has-text-white">Copyright @ 2021 TheRedApeFamily alrughts reserved</h1>

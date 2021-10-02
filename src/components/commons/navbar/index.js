@@ -10,6 +10,25 @@ import {set_section} from 'redux/actions/navbarActions';
 import './navbar.scss';
 
 const Navbar = props => {
+
+    const onBurgerClicked= e => {
+        e.preventDefault();
+
+        const target = e.currentTarget.dataset.target;
+        const $target = document.getElementById(target);
+        e.currentTarget.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+    }
+
+    const onBurgerIClicked = e => {
+        // e.preventDefault();
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle('is-active');
+        const navbarBurger = document.getElementById("navbar-burger");
+        navbarBurger.classList.toggle('is-active');
+    }
+
+
     return(
         <nav class="navbar has-background-black is-fixed-top" role="navigation" aria-label="main navigation">
             <div className="container">
@@ -18,28 +37,28 @@ const Navbar = props => {
                       <img src={logo} alt="" width="32" />
                     </a>
 
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a  id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" onClick={onBurgerClicked}>
                       <span aria-hidden="true"></span>
                       <span aria-hidden="true"></span>
                       <span aria-hidden="true"></span>
                     </a>
                 </div>
 
-                <div id="navbarBasicExample" class="navbar-menu">
+                <div id="navbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a className="has-text-white navbar-item" onClick={e => props.set_section("HOME")}>
+                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("HOME"); onBurgerIClicked(e)}}>
                         Home
                     </a>
 
-                    <a className="has-text-white navbar-item" onClick={e => props.set_section("FAQ")}>
+                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("FAQ"); onBurgerIClicked(e)}}>
                         FAQ
                     </a>
 
-                    <a className="has-text-white navbar-item" onClick={e => props.set_section("ROADMAP")}>
+                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}}>
                         Roadmap
                     </a>
 
-                    <a className="has-text-white navbar-item" onClick={ e => props.set_section("TEAM")}>
+                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={ e => {props.set_section("TEAM"); onBurgerIClicked(e)}}>
                         Team
                     </a>
 
@@ -47,22 +66,22 @@ const Navbar = props => {
                 </div>
 
                 <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a class="is-size-4" href="https://twitter.com/TheRedApeFamilay" target="_blank">
+                    <div class="navbar-item has-text-centered-mobile">
+                        <a class="is-size-4 " href="https://twitter.com/TheRedApeFamilay" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white" >
                                 <i class="fab fa-twitter"></i>
                             </span>
                         </a>
                     </div>
-                    <div class="navbar-item">
-                        <a class="is-size-4" href="https://www.youtube.com/channel/UCLCsACZQEeKOzjfbK2kIo9A" target="_blank">
+                    <div class="navbar-item has-text-centered-mobile">
+                        <a class="is-size-4 " href="https://www.youtube.com/channel/UCLCsACZQEeKOzjfbK2kIo9A" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white">
                                 <i class="fab fa-youtube"></i>
                             </span>
                         </a>
                     </div>
-                    <div class="navbar-item">
-                        <a class="is-size-4" href="https://discord.gg/76n76gXSTg" target="_blank">
+                    <div class="navbar-item has-text-centered-mobile">
+                        <a class="is-size-4 " href="https://discord.gg/76n76gXSTg" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white">
                                 <i class="fab fa-discord"></i>
                             </span>
@@ -70,7 +89,7 @@ const Navbar = props => {
                     </div>
 
 
-                    <div className="navbar-item">
+                    <div className="navbar-item has-text-centered-mobile">
                         <ConnectButton/>
                     </div>
                 </div>
