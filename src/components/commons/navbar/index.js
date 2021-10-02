@@ -67,7 +67,7 @@ const Navbar = props => {
 
                 <div class="navbar-end">
                     <div class="navbar-item has-text-centered-mobile">
-                        <a class="is-size-4 " href="https://twitter.com/TheRedApeFamilay" target="_blank" onClick={onBurgerIClicked}>
+                        <a class="is-size-4 " href="https://twitter.com/TheRedApeFamily" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white" >
                                 <i class="fab fa-twitter"></i>
                             </span>
