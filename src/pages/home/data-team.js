@@ -12,7 +12,7 @@ const team = [
         imageurl: member1,
         name: 'BlessedSon',
         charge: 'Executive Producer',
-        socialMedia: 'theblessedson17'
+        socialMedia: '@theblessedson17'
     }, {
         imageurl: member2,
         name: 'Hashem Zaini',
