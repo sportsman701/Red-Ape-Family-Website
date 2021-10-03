@@ -5,7 +5,7 @@ const data = [
     "After Ep5 sells out: Rarity introduction! And we move to ERC-721",
     "After Ep6 sells out: Opening of the TRAF Merch shop!",
     "After Ep9 sells out: Sandbox and CryptoVoxels land will be purchased for TRAF Cinema.",
-    "Aafter p10 sells out: 2 awesome end-of-the-season surprises for all the token holders."    
+    "After p10 sells out: 2 awesome end-of-the-season surprises for all the token holders."    
 ]
 
 export default data;
