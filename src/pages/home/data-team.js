@@ -12,7 +12,7 @@ const team = [
         imageurl: member1,
         name: 'BlessedSon',
         charge: 'Executive Producer',
-        socialMedia: <a href="https://twitter.com/theblessedson17">'@theblessedson17'</a>
+        socialMedia: '<a href="https://twitter.com/theblessedson17">@theblessedson17</a>'
     }, {
         imageurl: member2,
         name: 'Hashem Zaini',
