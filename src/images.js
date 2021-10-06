@@ -7,13 +7,17 @@ import member3Png from 'media/member3.png';
 import member4Png from 'media/member4.png';
 import member5Png from 'media/member5.png';
 import member6Png from 'media/member6.png';
+import member7Png from 'media/member7.png';
+import member8Png from 'media/member8.png';
 import cast1Png from 'media/cast1.png';
 import cast2Png from 'media/cast2.png';
 import cast3Png from 'media/cast3.png';
 import cast4Png from 'media/cast4.png';
 import cast5Png from 'media/cast5.png';
-import cast6Png from 'media/cast6.png';
-import cast7Png from 'media/cast7.png';
+import castMisteryPng from 'media/mystery.webp';
+import castQuestionPng from 'media/question.gif';
+import openseaPng from 'media/opensea.png';
+
 
 export const titleImg = titleImgPng;
 export const logo = logoPng;
@@ -27,6 +31,8 @@ export const member3 = member3Png;
 export const member4 = member4Png;
 export const member5 = member5Png;
 export const member6 = member6Png;
+export const member7 = member7Png;
+export const member8 = member8Png;
 
 //team cast
 export const ape1 = cast1Png;
@@ -34,5 +40,6 @@ export const ape2 = cast2Png;
 export const ape3 = cast3Png;
 export const ape4 = cast4Png;
 export const ape5 = cast5Png;
-export const ape6 = cast6Png;
-export const ape7 = cast7Png;
+export const mistery = castMisteryPng;
+export const question = castQuestionPng;
+export const opensea = openseaPng;

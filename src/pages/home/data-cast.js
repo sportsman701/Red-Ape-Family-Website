@@ -4,8 +4,9 @@ import {
     ape3,
     ape4,
     ape5,
-    ape6,
-    ape7
+    mistery,
+    question,
+    opensea
 } from 'images';
 
 const cast = [
@@ -13,38 +14,49 @@ const cast = [
         imageurl: ape1,
         name: "Chunky",
         discord: "BAYC #6614",
-        role: "TRAF Father"
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
         imageurl: ape2,
         name: "Winky",
         discord: "BAYC #6408",
-        role: "TRAF Mother"
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
         imageurl: ape3,
         name: "Ceasar",
         discord: "BAYC #9463",
-        role: "TRAF 1st Twin"
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
         imageurl: ape4,
         name: "Hunky",
         discord: "BAYC #6614",
-        role: "TRAF Father"
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
         imageurl: ape5,
         name: "Rocky",
         discord: "BAYC #6614",
-        role: "TRAF Father"
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
-        imageurl: ape6,
+        imageurl: mistery,
         name: "Sheila",
-        discord: "BAYC #7549",
-        role: "TRAF Neighbor"
+        discord: "BAYC #????",
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
     }, {
-        imageurl: ape7,
+        imageurl: mistery,
         name: "Hector",
-        discord: "BAYC #7667",
-        role: "TRAF Neighbor"
+        discord: "BAYC #????",
+        link: '<a href="https://www.instagram.com/bigtoysdubaimall/" ><span class="icon"><img src="'+ opensea +'"></span></a>',
+
+    }, {
+        imageurl: question,
+        name: "????#????"
     }
+
 ];
 
 export default cast;

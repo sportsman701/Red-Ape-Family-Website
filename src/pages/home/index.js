@@ -10,7 +10,7 @@ import {
 }
 from 'images';
 
-import roadmapData from './data-roadmap';
+import {data, data2, data3} from './data-roadmap';
 import teamData from './data-team';
 import castData from './data-cast';
 import faqData from './data-faq';
@@ -73,12 +73,18 @@ const HomePage = props => {
             <section className="hero is-large banner-home" ref={homeSection}>
                 <div className="hero-body bg-gradient">
                     <div className="container">
+                        <div className="columns">
+                            <div className="column is-2">
+                                <figure className="image">
+                                    <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
+                                </figure>
+                            </div>
+                        </div>
+
                         <div className="columns is-vcentered  px-3">
                             <div className="column has-text-centered">
 
-                                {/*}<figure className="image">
-                                    <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
-                                </figure>*/}
+
 
                                 <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cyellow has-text-black is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
                                     <strong>APE IN</strong>
@@ -119,71 +125,90 @@ const HomePage = props => {
             </section>
 
             {/*roadmap*/}
-            <section className="has-background-dark px-4" ref={roadMapSection}>
-                <div className="container py-6 px-4">
-                    <h1 className="subtitle has-text-white">ROADMAP 1.0</h1>
+            <section className="has-background-black px-4" ref={roadMapSection}>
+                <div className="container py-6 px-4 has-text-centered">
+                    <h1 className="title has-text-white">ROADMAP EPISODE 1</h1>
+
 
                     <ul className="roadmap-list">
                         {
-                            roadmapData.map( (rmap, i) =>
-                                <li className="has-text-white" key={i}>
-                                    <div className="columns is-mobile is-vcentered">
-                                        <div className="column is-1" style={{maxWidth: '40px'}}>
-                                            <figure className="image is-24x24">
-                                                <img src={movie} alt=""/>
-                                            </figure>
-                                        </div>
-                                        <div className="column">
-                                            <span>{rmap}</span>
-                                        </div>
-                                    </div>
+                            data.map( (rmap, i) =>
+                                <li className="has-text-white mb-3 is-size-5 has-text-weight-bold" key={i}>
+                                    <span className="has-text-warning">{rmap.title}</span> <br/>
+                                    <span><ReactHtml html={rmap.body}/></span>
                                 </li>
                             )
                         }
                     </ul>
                     <br/>
-                    <h1 className="subtitle has-text-white">As soon as Season 1 is completed, we will roll-out the roadmap of Season 2.</h1>
-                </div>
-            </section>
-
-            {/*tokenomics
-            <section className="banner-banana px-4" ref={faqSection}>
-                <div className="container py-6">
-                    <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">NFTs, Tokenomics, and Tiers</strong></h1>
-                    <div className="pb-6" style={{width: '100%', display: 'grid', placeItems: 'center'}}>
-                        <h1 className="title is-4 has-background-info has-text-white px-6 py-2 " style={{"border-radius": '50px'}}>FAQ</h1>
-                    </div>
-                    <br/><br/>
-                    <ul>
+                    <br/>
+                    <h1 className="subtitle has-text-white has-text-weight-bold">
+                        IF YOU BUY EPISODE 1 AND <span className="has-text-cyellow2">YOU ARE A BAYC HOLDER,</span> <br/>
+                        YOU CAN GET CHOSEN TO STAR IN EPISODE 2 AND BE PAID FOR YOUR IP RIGHTS
+                    </h1>
+                    <ul className="roadmap-list">
                         {
-                            faqData.map( (f, i) =>
-                                <li className="mb-6" key={i}>
-                                    <h1 className="title is-5 mb-2">{f.question}</h1>
-                                    <p><ReactHtml html={f.answer}/></p>
+                            data2.map( (rmap, i) =>
+                                <li className="has-text-white mb-3 is-size-5 has-text-weight-bold" key={i}>
+                                    <span><ReactHtml html={rmap.body}/></span>
                                 </li>
                             )
                         }
                     </ul>
+                    <br/>
+                    <h1 className="subtitle has-text-white has-text-weight-bold">
+                        IF YOU BUY EPISODE 1 AND <span className="has-text-cyellow2">YOU ARE NOT A BAYC HOLDER</span> <br/>
+                        YOU WILL ENTER A RAFFLE TO <span style={{color: 'red'}}>WIN 1 BORED APE.</span>
+                    </h1>
+
 
                 </div>
-            </section>*/}
+            </section>
+
+            {/* mint section*/}
+            <section className="has-background-primary py-6">
+                <div className="container has-text-centered">
+                        <h1 className="title has-text-white">ROADMAP SEASON 1</h1>
+                    <ul className="roadmap-list">
+                        {
+                            data3.map( (rmap, i) =>
+                                <li className="has-text-white mb-3 is-size-5 has-text-weight-bold" key={i}>
+                                    <span className="has-text-warning">{rmap.title}</span> <br/>
+                                    <span><ReactHtml html={rmap.body}/></span>
+                                </li>
+                            )
+                        }
+                    </ul>
+                    <br/>
+                    <h1 className="subtitle has-text-white has-text-weight-bold">
+                        OTHER ANNOUNCEMENTS WILL BE MAID THROUGHOUT THE SEASON
+                    </h1>
+
+                </div>
+            </section>
 
             {/* team */}
             <section className="has-background-dark px-4" ref={teamSection}>
                 <div className="container py-6">
                     <h1 className="subtitle has-text-white">TRAF TEAM - Our Team if from all over the world!</h1>
 
-                    <div className="columns px-3">
+                    <div className="columns is-multiline px-3">
                         {
                             teamData.map( (t, i) =>
-                                <div className="column has-text-centered" key={i}>
+                                <div className="column is-2 has-text-centered" key={i}>
 
-                                    <img className="is-rounded" src={t.imageurl} alt="" width="256" style={{"border-radius": '50%'}}/>
+
+                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="256" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+
+
+                                    <br/>
                                     <br/>
 
-                                    <h1 className="title has-text-white is-5 has-text-centered">{t.name}</h1>
-                                    <h1 className="subtitle has-text-white is-5 has-text-centered mb-0">{t.charge}</h1>
-                                    <h1 className="subtitle has-text-white is-5 has-text-centered">{t.socialMedia}</h1>
+                                    <div className="" style={{height:"80px"}}>
+                                        <h1 className="title has-text-white is-5 has-text-centered">{t.name}</h1>
+                                        <h1 className="subtitle has-text-white is-6 has-text-centered">{t.charge}</h1>
+                                    </div>
+                                    <h1 className="subtitle has-text-white is-5 has-text-centered"><ReactHtml html={t.link}/></h1>
                                 </div>
                             )
                         }
@@ -193,18 +218,20 @@ const HomePage = props => {
             </section>
 
             {/*tokenomics*/}
-            <section className=" px-4">
+            <section className="has-background-primary px-4">
                 <div className="container py-6">
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">MEET THE CAST</strong></h1>
-                    <div className="columns">
+                    <div className="columns is-multiline">
                         {
                             castData.map( (c, i) =>
-                                <div className="column has-text-centered" key={i}>
-                                    <img className="is-rounded" src={c.imageurl} alt="" width="256" style={{"border-radius": '50%'}}/>
+                                <div className="column is-2 has-text-centered" key={i}>
+                                    <img className="is-rounded" src={c.imageurl} alt="" width="256" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
                                     <br/>
-                                    <h1 className="title is-5 has-text-centered has-text-danger">{c.name}</h1>
-                                    <h1 className="subtitle is-5 has-text-centered mb-0">{c.discord}</h1>
-                                    <h1 className="subtitle is-5 has-text-centered">{c.role}</h1>
+                                    <div className="" style={{height:"80px"}}>
+                                        <h1 className="title is-5 has-text-centered has-text-white">{c.name}</h1>
+                                        <h1 className="subtitle is-5 has-text-centered mb-0 has-text-white">{c.discord}</h1>
+                                    </div>
+                                    <h1 className="subtitle is-5 has-text-centered"><ReactHtml html={c.link}/></h1>
                                 </div>
                             )
                         }
