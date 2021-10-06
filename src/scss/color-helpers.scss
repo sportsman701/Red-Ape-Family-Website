@@ -1,0 +1,30 @@
+@import './vars';
+
+.has-background-cyellow{
+    background: $cyellow !important;
+}
+
+.is-cyellow{
+    background: $cyellow !important;
+    border-color: $cyellow !important;
+    color: black;
+    font-weight: bold !important;
+}
+
+.has-background-cpurple{
+    background: $cpurple !important;
+}
+
+.is-cpurple{
+    background: $cpurple !important;
+    border-color: $cpurple !important;
+}
+
+
+.has-text-cyellow{
+    color: #FEE599 !important;
+}
+
+.has-text-cpurple{
+    color: $cpurple !important;
+}

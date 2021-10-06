@@ -31,16 +31,18 @@ const Form = props => {
         }, [props.wallet.currentAccount]
     );
 
-
+    // console.log(webData);
     const getWebData = async () => {
         if(props.wallet.connectedToOperatingNetwork){
             let webData = null;
+            console.log(await erc_contract.methods.webData(props.wallet.currentAccount).call());
             try {
                 webData = await erc_contract.methods.webData(props.wallet.currentAccount).call();
                 webData = {
                     ...webData,
                     mintsLeft: webData.maxMint - webData.userMints
                 }
+                console.log(webData);
             } catch (e) {
                 console.log('ERROR CONSULTING DATA', e);
             }finally{
@@ -122,20 +124,20 @@ const Form = props => {
                                         null
                                     :
                                         <div className="mb-4">
-                                            <h1 className="subtitle mb-0">Your mints: {webData.userMints}</h1>
-                                            <small> NFT's left: {webData.leftNFT}</small>
+                                            <h1 className="subtitle mb-0 has-text-white has-text-weight-bold">Your mints: {webData.userMints}</h1>
+                                            <small className="has-text-white has-text-weight-bold"> NFT's left: {webData.leftNFT}</small>
                                         </div>
                                 }
-                                <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
-                                <button className={`button is-info is-rounded ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
-                                <button className="button is-info is-rounded" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
+                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
+                                <button className={`button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
+                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
                             </div>
                         :
-                            <button type="button" className="button is-info" onClick={e => props.request_change_network(1)}>
+                            <button type="button" className="button is-cyellow" onClick={e => props.request_change_network(1)}>
                                 Switch to ETH Mainnet
                             </button>
                     ) : (
-                        <button type="button" className="button is-info" onClick={async e => await props.request_connection()}>
+                        <button type="button" className="button is-cyellow" onClick={async e => await props.request_connection()}>
                             Connect to wallet
                         </button>
                     )
@@ -145,14 +147,12 @@ const Form = props => {
                 <div>{(webData && webData.mintsLeft == 0) ? 'You have reached the minting limit for this episode! Thank you so much!' : ''}</div>
                 <br/>
                 <br/>
-                <p className="has-text-centered has-text-weight-bold">
-                    The Mint of the Red Ape Family episode 1 is now live!
+                <p className="has-text-centered has-text-weight-bold has-text-white has-font-audiowide">
+                    MAXIMUM OF 5 TOKENS PER WALLET
                     <br/>
-                    This is the first ever animated comedy series featuring Bored Apes, and only 333 tokens are available!
+                    LAPTOP/DESKTOP ONLY
                     <br/>
-                    It is also the first animated serie in history build on and starring NFTs!
-                    <br/>
-                    Don't sleep on this one!
+                    SUPPORTED WALLET: METAMASK
                 </p>
             </div>
         </form>

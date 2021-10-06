@@ -16,7 +16,7 @@ import castData from './data-cast';
 import faqData from './data-faq';
 
 import ReactHtml from 'raw-html-react';
-import Form from './form';
+import MintSection from './mint-section';
 
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
@@ -70,20 +70,25 @@ const HomePage = props => {
     return (
         <div>
             <Navbar/>
-            <section className="hero banner-home" ref={homeSection}>
+            <section className="hero is-large banner-home" ref={homeSection}>
                 <div className="hero-body bg-gradient">
                     <div className="container">
-                        <div className="columns is-vecentered  px-3">
-                            <div className="column">
+                        <div className="columns is-vcentered  px-3">
+                            <div className="column has-text-centered">
 
-                                <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
+                                {/*}<figure className="image">
+                                    <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
+                                </figure>*/}
 
-                                <h1 className="subtitle has-text-white">The Red Ape Family is a 2D animated sitcom that brings 4 Bored Apes to life an imaginary city and an imaginary world!</h1>
-                                <button className="button is-info is-rounded" onClick={e => props.set_section("FAQ")}>FAQ</button>&nbsp;&nbsp;&nbsp;
-                                <button className="button is-info is-rounded" onClick={e => props.set_section("ROADMAP")}>Roadmap</button>&nbsp;&nbsp;&nbsp;
+                                <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cyellow has-text-black is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
+                                    <strong>APE IN</strong>
+                                </a>
 
                             </div>
-                            <div className="column">
+                            <div className="column  has-text-centered">
+
+                                <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
+                                    <strong>JOIN DISCORD</strong></a>
 
                             </div>
                         </div>
@@ -92,23 +97,24 @@ const HomePage = props => {
             </section>
 
             {/* mint section*/}
-            <section className="banner-banana py-6">
+            <section className="has-background-primary py-6">
                 <div className="container">
-                    <div className="">
-                        <div className="columns">
-                            <div className="column is-half is-offset-one-quarter">
-                                <figure class="image is-16by9">
-                                    <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/BKkc2v8echI" frameborder="0" allowfullscreen></iframe>
-                                </figure>
-                            </div>
+
+                    <div className="columns is-vcentered">
+                        <div className="column has-text-centered  px-4">
+                                <MintSection/>
                         </div>
+                        <div className="column">
+                            <p className="has-text-white has-text-weight-bold is-size-5 has-text-centered">
 
+                                Weaving contemporary sci-fi comedy with the infrastructure of NFTs, The Red Ape Family is the first Digital Asset to take shape of a sitcom whilst also involving your favorite NFTs.
+                                <br/><br/>
+                                Mint of EP1 LIVE // 333 Tokens
+
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="">
-                        <h1 className="subtitle"></h1>
-                        <Form/>
-                    </div>
                 </div>
             </section>
 
@@ -140,7 +146,7 @@ const HomePage = props => {
                 </div>
             </section>
 
-            {/*tokenomics*/}
+            {/*tokenomics
             <section className="banner-banana px-4" ref={faqSection}>
                 <div className="container py-6">
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">NFTs, Tokenomics, and Tiers</strong></h1>
@@ -160,7 +166,7 @@ const HomePage = props => {
                     </ul>
 
                 </div>
-            </section>
+            </section>*/}
 
             {/* team */}
             <section className="has-background-dark px-4" ref={teamSection}>
