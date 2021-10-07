@@ -69,19 +69,19 @@ const HomePage = props => {
     return (
         <div>
 
-            <section className="hero is-medium banner-home" ref={homeSection}>
-                <div className="hero-body bg-gradient">
-                <div className="has--white">
+            <section className="hero is-medium banner-home " ref={homeSection}>
+                <div className="hero-body bg-gradient is-flex is-flex-direction-column py-0" style={{height: '500px'}}>
+                {/*}<div className="has--white">
                     <div className="centered-mobile" style={{width: "250px"}}>
                         <figure className="image">
                             <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
                         </figure>
                     </div>
-                </div>
-                    <div className="container">
+                </div>*/}
+                    <div className="container is-flex-grow-1 is-flex is-justify-content-flex-end is-align-items-flex-end" style={{width: '100%'}}>
 
 
-                        <div className="columns is-vcentered  px-3">
+                        <div className="columns is-vcentered  px-3" style={{transform: 'translateY(-50px)'}}>
 
                             <div className="column  has-text-centered">
 
@@ -235,6 +235,9 @@ const HomePage = props => {
                         }
                     </div>
                     <br/><br/>
+                        <h1 className="subtitle has-text-white has-text-centered mb-5">Starting Episode 2</h1>
+                    <br/>
+
                     <div className="columns ">
                         <div className="column"></div>
                         {
@@ -252,8 +255,7 @@ const HomePage = props => {
                         }
                         <div className="column"></div>
                     </div>
-                    <br/>
-                    <h1 className="subtitle has-text-white has-text-centered">Starting Episode 2</h1>
+
                 </div>
             </section>
 

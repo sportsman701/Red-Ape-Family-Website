@@ -41,20 +41,21 @@ const cast = [
         link: '<a href="https://opensea.io/assets/0xba30e5f9bb24caa003e9f2f0497ad287fdf95623/7667" ><span class="icon"><img src="'+ opensea +'"></span></a>',
 
     }, {
-        imageurl: mistery,
-        name: "Secondary Character*",
-        discord: "BAYC #????",
-        link: ''
-
-    }, {
-        imageurl: mistery,
-        name: "Main Character*",
-        discord: "BAYC #????",
+        imageurl: question,
+        name: "Main Character",
+        discord: "????#????",
         link: ''
 
     }, {
         imageurl: question,
-        name: "????#????",
+        name: "Secondary Character",
+        discord: "????#????",
+        link: ''
+
+    }, {
+        imageurl: question,
+        name: "Guest NFT",
+        discord: "????#????",
         link: ''
     }
 

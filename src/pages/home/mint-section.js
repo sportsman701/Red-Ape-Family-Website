@@ -9,6 +9,8 @@ import {start_minting_tx} from 'redux/actions/txActions';
 
 const Form = props => {
 
+    const [videoOpen, setVideoOpen] = useState(false);
+
     const [webData, setWebData] = useState(null);
     // console.log(webData);
     const erc_contract = props.web3Reducer.contracts['ERC_CONTRACT'];
@@ -105,6 +107,15 @@ const Form = props => {
 
     return(
         <form onSubmit={formik.handleSubmit}>
+            <div class={`modal ${videoOpen ? 'is-active' : ''}`}>
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <figure class="image is-16by9">
+                        <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/kuWPm0w1bfE" frameborder="0" allowfullscreen></iframe>
+                    </figure>
+                </div>
+                <button class="modal-close is-large" aria-label="close" onClick={e => setVideoOpen(false)}></button>
+            </div>
             <div className="has-text-centered" >
 
                 <div className="control">
@@ -151,6 +162,8 @@ const Form = props => {
                     MAXIMUM OF 5 TOKENS PER WALLET
                     <br/>
                     SUPPORTED WALLET: METAMASK
+                    <br/><br/>
+                    <a className="has-text-cyellow" onClick={e => setVideoOpen(true)}>HOW TO MINT FROM YOUR SMARTPHONE </a>
                 </p>
             </div>
         </form>
