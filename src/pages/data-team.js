@@ -20,7 +20,7 @@ const team = [
     }, {
         sortId: 2,
         imageurl: member2,
-        name: 'The BlessedSon',
+        name: 'TheBlessedSon',
         charge: 'Chief Project Mgt Officer',
         link: '<a href="https://twitter.com/theblessedson17" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-twitter"></i></span></a>',
         info: 'Youssouf (A.K.A. TheBlessedSon or TBS) has been a crypto enthusiast and trader since 2017. Hailing from Tetouan, Morocco, he initially got into NFTs to help his father, a smartphone artist, to sell his art. He then acquired an entire shrewdness of Bored Apes, which allowed him to deep dive into the NFT world. With a Master’s Degree in Engineering and a passion for Project Management, TBS have worked for large companies in different sectors and contributed to build several start-ups in healthcare-IT and Teleco.'

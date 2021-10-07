@@ -128,9 +128,9 @@ const Form = props => {
                                             <small className="has-text-white has-text-weight-bold"> NFT's left: {webData.leftNFT}</small>
                                         </div>
                                 }
-                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold" type="button" style={{height: '40px', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
-                                <button className={`button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
-                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold" type="button" style={{height: '40px', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
+                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
+                                <button className={`button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4 ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
+                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
                             </div>
                         :
                             <button type="button" className="button is-cyellow" onClick={e => props.request_change_network(1)}>
@@ -148,7 +148,7 @@ const Form = props => {
                 <br/>
                 <br/>
                 <p className="has-text-centered has-text-weight-bold has-text-white has-font-audiowide">
-                    MAXIMUM OF 5 TOKENS PER WALLET                    
+                    MAXIMUM OF 5 TOKENS PER WALLET
                     <br/>
                     SUPPORTED WALLET: METAMASK
                 </p>

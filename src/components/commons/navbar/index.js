@@ -53,9 +53,9 @@ const Navbar = props => {
                         Home
                     </Link>
 
-                    <Link to="/faq" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {onBurgerIClicked(e)}}>
+                    {/*}<Link to="/faq" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {onBurgerIClicked(e)}}>
                         FAQ
-                    </Link>
+                    </Link>*/}
 
                     <Link to="/home" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}}>
                         Roadmap

@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import _teamData from '../data-team';
 import ReactHtml from 'raw-html-react';
 
-const teamData = _teamData.sort((a,b) => {
+const teamData = [..._teamData].sort((a,b) => {
     if (a.sortId < b.sortId) {
         return -1;
     }

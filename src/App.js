@@ -36,9 +36,9 @@ const App = () => {
                     <TeamPage/>
                 </Route>
 
-                <Route exact path="/faq">
+                {/*<Route exact path="/faq">
                     <FaqPage/>
-                </Route>
+                </Route>*/}
             </Switch>
             <Footer/>
         </Router>

@@ -152,8 +152,8 @@ const HomePage = props => {
                         }
                     </ul>
                     <br/>
-                    <h1 className="subtitle has-text-white has-text-weight-bold">
-                        OTHER ANNOUNCEMENTS WILL BE MAID THROUGHOUT THE SEASON
+                    <h1 className="subtitle has-text-white has-text-weight-bold is-italic">
+                        OTHER ANNOUNCEMENTS WILL BE MADE THROUGHOUT THE SEASON
                     </h1>
 
                 </div>
@@ -217,7 +217,8 @@ const HomePage = props => {
             {/*tokenomics*/}
             <section className="has-background-primary px-4">
                 <div className="container py-6">
-                    <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">MEET THE CAST</strong></h1>
+                    <h1 className="title has-text-white has-text-weight-bold has-text-centered">MEET THE CAST</h1>
+                    <br/><br/><br/>
                     <div className="columns">
                         {
                             [...castData].splice(0, 5).map( (c, i) =>
