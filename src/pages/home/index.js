@@ -82,18 +82,10 @@ const HomePage = props => {
 
 
                         <div className="columns is-vcentered  px-3">
-                            <div className="column has-text-centered">
 
-
-
-                                <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cyellow has-text-black is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
-                                    <strong>APE IN</strong>
-                                </a>
-
-                            </div>
                             <div className="column  has-text-centered">
 
-                                <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
+                                <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-4 is-rounded has-font-audiowide" style={{width: '200px'}}>
                                     <strong>JOIN DISCORD</strong></a>
 
                             </div>
