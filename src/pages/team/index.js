@@ -1,6 +1,19 @@
 import {useEffect} from 'react';
-import teamData from '../data-team';
+import _teamData from '../data-team';
 import ReactHtml from 'raw-html-react';
+
+const teamData = _teamData.sort((a,b) => {
+    if (a.sortId < b.sortId) {
+        return -1;
+    }
+    if (a.sortId > b.sortId) {
+        return 1;
+    }
+
+    // a must be equal to b
+    return 0;
+});
+
 const Team = props => {
 
     useEffect(
@@ -20,7 +33,7 @@ const Team = props => {
                         {
                             teamData.map( (t, i) => {
 
-                                if(i == 4) return null;
+                                if(i == 7) return null;
 
                                 return(
                                     <li className=" mb-6" key={i}>

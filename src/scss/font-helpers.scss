@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 // .has-font-audiowide{
 //     font-family: 'Audiowide', cursive;
 // }
 
 .has-font-opensans{
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    // font-weight: bold;
 }
 
 *:not(i){

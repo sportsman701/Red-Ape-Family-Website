@@ -85,7 +85,7 @@ const HomePage = props => {
 
                             <div className="column  has-text-centered">
 
-                                <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-4 is-rounded has-font-audiowide" style={{width: '200px'}}>
+                                <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-4 is-rounded has-font-audiowide">
                                     <strong>JOIN DISCORD</strong></a>
 
                             </div>
