@@ -18,8 +18,8 @@ const team = [
         info: 'Sarah Khorbtli, Syrian-American Art Director based in Dubai, ‏Started her career as a motion design and animation instructor at IUST and later moved here expertise to work on various projects and clients in the MENA region., Sarah joined the creative team at Zaini Media to utilize here motion design skills and unique art direction, to bring even more ideas to life.'
     }, {
         imageurl: member2,
-        name: 'BlessedSon',
-        charge: 'Executive Producer',
+        name: 'The BlessedSon',
+        charge: 'Chief Project Mgt Officer',
         link: '<a href="https://twitter.com/theblessedson17" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-twitter"></i></span></a>',
         info: 'Youssouf (A.K.A. TheBlessedSon or TBS) has been a crypto enthusiast and trader since 2017. Hailing from Tetouan, Morocco, he initially got into NFTs to help his father, a smartphone artist, to sell his art. He then acquired an entire shrewdness of Bored Apes, which allowed him to deep dive into the NFT world. With a Master’s Degree in Engineering and a passion for Project Management, TBS have worked for large companies in different sectors and contributed to build several start-ups in healthcare-IT and Teleco.'
     }, {

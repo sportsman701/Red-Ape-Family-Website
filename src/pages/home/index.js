@@ -214,6 +214,7 @@ const HomePage = props => {
                             )
                         }
                     </div>
+                    <br/><br/>
                     <div className="columns is-multiline px-3">
                         <div className="column"></div>
                         {
@@ -260,6 +261,7 @@ const HomePage = props => {
                             )
                         }
                     </div>
+                    <br/><br/>
                     <div className="columns ">
                         <div className="column"></div>
                         {
