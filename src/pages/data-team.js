@@ -6,7 +6,8 @@ import {
     member5,
     member6,
     member7,
-    member8
+    member8,
+    member9
 } from 'images';
 
 const team = [
@@ -40,10 +41,10 @@ const team = [
         info: `Multi-award winning director and entrepreneur, Hashem has worked with a galaxy of artists, creatives and major global brands (ranging from Nike to National Geographic). Of Moroccan and Iraqi descent, Hashem started making movies as a child and quickly fell in love with the art of cinema and storytelling. He set up Zaini Media in Dubai in 2012 and, since then, has worked with everyone from recording artists to Hollywood directors. He is now one of the region's most sought after filmmakers.`
     }, {
         sortId: 8,
-        imageurl: member5,
-        name: 'Zaini Media',
-        charge: 'Creative Studio',
-        link: '<a href="http://www.zainimedia.com/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fal fa-globe"></i></span></a>',
+        imageurl: member9,
+        name: 'Adel Antabli',
+        charge: 'Producer',
+        link: '<a href="https://www.instagram.com/tablino/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-instagram"></i></span></a>',
     }, {
         sortId: 5,
         imageurl: member6,
@@ -65,6 +66,12 @@ const team = [
         charge: 'Music Producer',
         link: '<a href="https://www.instagram.com/donfuego.beats/?hl=en" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-instagram"></i></span></a>',
         info: 'Don Fuego, music producer, sound engineer and musician.Don Fuego is a producer of exceptional creative talent and musical diversity. He has collaborated with a wide range of world renowned international recording artists across diverse genres, and also has a  successful career making music jingles and compositions for  tv, radio and other media outlets. His corporate clients include large international corporations, media and telecommunications companies. He is now widening his professional portfolio by including voice-over and associated musical compositions and productions.'
+    }, {
+        sortId: 9,
+        imageurl: member5,
+        name: 'Zaini Media',
+        charge: 'Creative Studio',
+        link: '<a href="http://www.zainimedia.com/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fal fa-globe"></i></span></a>',
     }
 ];
 

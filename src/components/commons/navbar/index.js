@@ -36,9 +36,9 @@ const Navbar = props => {
         <nav class="navbar has-background-black is-fixed-top" role="navigation" aria-label="main navigation">
             <div className="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="">
+                    <Link to="/home" class="navbar-item" onClick={e => {props.set_section("HOME")}}>
                       <img src={logo} alt="" width="32" />
-                    </a>
+                    </Link>
 
                     <a  id="navbar-burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar" onClick={onBurgerClicked}>
                       <span aria-hidden="true"></span>
