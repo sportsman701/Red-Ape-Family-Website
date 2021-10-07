@@ -4,6 +4,8 @@ import {
 
 import ConnectButton from 'components/connect-btn';
 
+import {Link} from 'react-router-dom';
+
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
 
@@ -46,21 +48,21 @@ const Navbar = props => {
 
                 <div id="navbar" class="navbar-menu">
                 <div class="navbar-start">
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("HOME"); onBurgerIClicked(e)}}>
+                    <Link to="/home" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("HOME"); onBurgerIClicked(e)}}>
                         Home
-                    </a>
+                    </Link>
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("FAQ"); onBurgerIClicked(e)}}>
+                    <Link to="/faq" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {onBurgerIClicked(e)}}>
                         FAQ
-                    </a>
+                    </Link>
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}}>
+                    <Link to="/home" className="has-text-white navbar-item has-text-centered-mobile" onClick={e => {props.set_section("ROADMAP"); onBurgerIClicked(e)}}>
                         Roadmap
-                    </a>
+                    </Link>
 
-                    <a className="has-text-white navbar-item has-text-centered-mobile" onClick={ e => {props.set_section("TEAM"); onBurgerIClicked(e)}}>
+                    <Link to="/team" className="has-text-white navbar-item has-text-centered-mobile" onClick={ e => {onBurgerIClicked(e)}}>
                         Team
-                    </a>
+                    </Link>
 
 
                 </div>

@@ -11,7 +11,7 @@ import {
 from 'images';
 
 import {data, data2, data3} from './data-roadmap';
-import teamData from './data-team';
+import teamData from '../data-team';
 import castData from './data-cast';
 import faqData from './data-faq';
 
@@ -23,6 +23,7 @@ import {set_section} from 'redux/actions/navbarActions';
 
 import './home.scss';
 
+console.log([...teamData].splice(0, 5));
 
 
 const HomePage = props => {
@@ -50,7 +51,7 @@ const HomePage = props => {
 
                 case "ROADMAP":
                     y = roadMapSection.current.scrollIntoView()
-                    window.scrollBy(0, -45);
+                    // window.scrollBy(0, -45);
                     break;
 
                 case "TEAM":
@@ -69,7 +70,7 @@ const HomePage = props => {
 
     return (
         <div>
-            <Navbar/>
+
             <section className="hero is-large banner-home" ref={homeSection}>
                 <div className="hero-body bg-gradient">
                     <div className="container">
@@ -93,7 +94,7 @@ const HomePage = props => {
                             </div>
                             <div className="column  has-text-centered">
 
-                                <a href="https://discord.gg/42QAfwhu" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
+                                <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-5 is-rounded has-font-audiowide" style={{width: '200px'}}>
                                     <strong>JOIN DISCORD</strong></a>
 
                             </div>
@@ -188,17 +189,18 @@ const HomePage = props => {
             </section>
 
             {/* team */}
-            <section className="has-background-dark px-4" ref={teamSection}>
+            <section className="has-background-black px-4" ref={teamSection}>
                 <div className="container py-6">
-                    <h1 className="subtitle has-text-white">TRAF TEAM - Our Team if from all over the world!</h1>
+                        <h1 className="title has-text-white has-text-centered">MEET THE TEAM</h1>
+                        <br/><br/><br/>
 
                     <div className="columns is-multiline px-3">
                         {
-                            teamData.map( (t, i) =>
-                                <div className="column is-2 has-text-centered" key={i}>
+                            [...teamData].splice(0, 5).map( (t, i) =>
+                                <div className="column has-text-centered" key={i}>
 
 
-                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="256" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
 
 
                                     <br/>
@@ -213,6 +215,29 @@ const HomePage = props => {
                             )
                         }
                     </div>
+                    <div className="columns is-multiline px-3">
+                        <div className="column"></div>
+                        {
+                            [...teamData].splice(5, 3).map( (t, i) =>
+                                <div className="column has-text-centered" key={i}>
+
+
+                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+
+
+                                    <br/>
+                                    <br/>
+
+                                    <div className="" style={{height:"80px"}}>
+                                        <h1 className="title has-text-white is-5 has-text-centered">{t.name}</h1>
+                                        <h1 className="subtitle has-text-white is-6 has-text-centered">{t.charge}</h1>
+                                    </div>
+                                    <h1 className="subtitle has-text-white is-5 has-text-centered"><ReactHtml html={t.link}/></h1>
+                                </div>
+                            )
+                        }
+                        <div className="column"></div>
+                    </div>
 
                 </div>
             </section>
@@ -221,12 +246,12 @@ const HomePage = props => {
             <section className="has-background-primary px-4">
                 <div className="container py-6">
                     <h1 className="subtitle  has-text-centered-mobile"><strong className="has-text-info">MEET THE CAST</strong></h1>
-                    <div className="columns is-multiline">
+                    <div className="columns">
                         {
-                            castData.map( (c, i) =>
-                                <div className="column is-2 has-text-centered" key={i}>
-                                    <img className="is-rounded" src={c.imageurl} alt="" width="256" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
-                                    <br/>
+                            [...castData].splice(0, 5).map( (c, i) =>
+                                <div className="column has-text-centered" key={i}>
+                                    <img className="is-rounded" src={c.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <br/><br/>
                                     <div className="" style={{height:"80px"}}>
                                         <h1 className="title is-5 has-text-centered has-text-white">{c.name}</h1>
                                         <h1 className="subtitle is-5 has-text-centered mb-0 has-text-white">{c.discord}</h1>
@@ -236,9 +261,26 @@ const HomePage = props => {
                             )
                         }
                     </div>
+                    <div className="columns ">
+                        <div className="column"></div>
+                        {
+                            [...castData].splice(5, 3).map( (c, i) =>
+                                <div className="column has-text-centered" key={i}>
+                                    <img className="is-rounded" src={c.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <br/><br/>
+                                    <div className="" style={{height:"80px"}}>
+                                        <h1 className="title is-5 has-text-centered has-text-white">{c.name}</h1>
+                                        <h1 className="subtitle is-5 has-text-centered mb-0 has-text-white">{c.discord}</h1>
+                                    </div>
+                                    <h1 className="subtitle is-5 has-text-centered"><ReactHtml html={c.link}/></h1>
+                                </div>
+                            )
+                        }
+                        <div className="column"></div>
+                    </div>
                 </div>
             </section>
-            <Footer/>
+
         </div>
     );
 }

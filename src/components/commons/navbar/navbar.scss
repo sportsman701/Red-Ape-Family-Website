@@ -4,9 +4,12 @@
             background: #FFC200 !important;
             color: black !important;
         }
+
+        &:focus{
+            background: none;
+        }
     }
 }
-
 .navbar-menu{
 
     @media (max-width: 769px){
