@@ -138,7 +138,7 @@ const Form = props => {
                             </button>
                     ) : (
                         <button type="button" className="button is-cyellow" onClick={async e => await props.request_connection()}>
-                            Connect to wallet
+                            Connect wallet
                         </button>
                     )
 
