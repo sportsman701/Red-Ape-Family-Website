@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 
 import {connect} from 'react-redux';
 import {set_section} from 'redux/actions/navbarActions';
+import {opensea} from 'images';
 
 import './navbar.scss';
 
@@ -86,6 +87,13 @@ const Navbar = props => {
                         <a class="is-size-4 " href="https://discord.gg/76n76gXSTg" target="_blank" onClick={onBurgerIClicked}>
                             <span className="icon has-text-white">
                                 <i class="fab fa-discord"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="navbar-item has-text-centered-mobile">
+                        <a class="is-size-4 " href="https://opensea.io/collection/theredapefamily" target="_blank" onClick={onBurgerIClicked}>
+                            <span className="icon has-text-white">
+                                <img src={opensea} alt=""/>
                             </span>
                         </a>
                     </div>

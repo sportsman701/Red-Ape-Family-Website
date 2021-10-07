@@ -42,13 +42,13 @@ const cast = [
 
     }, {
         imageurl: mistery,
-        name: "Sheila",
+        name: "Secondary Character*",
         discord: "BAYC #????",
         link: ''
 
     }, {
         imageurl: mistery,
-        name: "Hector",
+        name: "Main Character*",
         discord: "BAYC #????",
         link: ''
 

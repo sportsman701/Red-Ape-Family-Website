@@ -23,7 +23,7 @@ const footer = props => {
                     </a>
                 </p>
                 <br/>
-                <h1 className="subtitle has-text-white">Copyright @ 2021 TheRedApeFamily all rights reserved</h1>
+                <h1 className="subtitle has-text-white is-6">Copyright @ 2021 TheRedApeFamily all rights reserved</h1>
             </div>
         </footer>
     );

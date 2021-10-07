@@ -15,7 +15,7 @@ const ConnectBtn = props => {
     }
 
     return(
-        <button className="button is-rounded connect-btn" onClick={onClicked}>
+        <button className="button is-rounded is-cyellow" onClick={onClicked}>
             {wallet.isConnected && wallet.currentAccount != null? getAddressReduced(wallet.currentAccount) : 'Connect'}
         </button>
     );

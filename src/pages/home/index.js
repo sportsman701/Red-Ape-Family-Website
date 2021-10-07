@@ -107,7 +107,7 @@ const HomePage = props => {
 
                                 Weaving contemporary sci-fi comedy with the infrastructure of NFTs, The Red Ape Family is the first Digital Asset to take shape of a sitcom whilst also involving your favorite NFTs.
                                 <br/><br/>
-                                Mint of EP1 LIVE // 333 Tokens
+                                Pre-sale of EP1 is LIVE - Only 333 Tokens Available
 
                             </p>
                         </div>
@@ -133,26 +133,6 @@ const HomePage = props => {
                         }
                     </ul>
                     <br/>
-                    <br/>
-                    <h1 className="subtitle has-text-white has-text-weight-bold">
-                        IF YOU BUY EPISODE 1 AND <span className="has-text-cyellow2">YOU ARE A BAYC HOLDER,</span> <br/>
-                        YOU CAN GET CHOSEN TO STAR IN EPISODE 2 AND BE PAID FOR YOUR IP RIGHTS
-                    </h1>
-                    <ul className="roadmap-list">
-                        {
-                            data2.map( (rmap, i) =>
-                                <li className="has-text-white mb-3 is-size-5 has-text-weight-bold" key={i}>
-                                    <span><ReactHtml html={rmap.body}/></span>
-                                </li>
-                            )
-                        }
-                    </ul>
-                    <br/>
-                    <h1 className="subtitle has-text-white has-text-weight-bold">
-                        IF YOU BUY EPISODE 1 AND <span className="has-text-cyellow2">YOU ARE NOT A BAYC HOLDER</span> <br/>
-                        YOU WILL ENTER A RAFFLE TO <span style={{color: 'red'}}>WIN 1 BORED APE.</span>
-                    </h1>
-
 
                 </div>
             </section>
@@ -191,7 +171,7 @@ const HomePage = props => {
                                 <div className="column has-text-centered" key={i}>
 
 
-                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="150" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
 
 
                                     <br/>
@@ -214,7 +194,7 @@ const HomePage = props => {
                                 <div className="column has-text-centered" key={i}>
 
 
-                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <img className="is-rounded bwToColorImg" src={t.imageurl} alt="" width="150" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
 
 
                                     <br/>
@@ -242,7 +222,7 @@ const HomePage = props => {
                         {
                             [...castData].splice(0, 5).map( (c, i) =>
                                 <div className="column has-text-centered" key={i}>
-                                    <img className="is-rounded" src={c.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <img className="is-rounded" src={c.imageurl} alt="" width="150" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
                                     <br/><br/>
                                     <div className="" style={{height:"80px"}}>
                                         <h1 className="title is-5 has-text-centered has-text-white">{c.name}</h1>
@@ -259,7 +239,7 @@ const HomePage = props => {
                         {
                             [...castData].splice(5, 3).map( (c, i) =>
                                 <div className="column has-text-centered" key={i}>
-                                    <img className="is-rounded" src={c.imageurl} alt="" width="200" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
+                                    <img className="is-rounded" src={c.imageurl} alt="" width="150" style={{boxShadow: '0px 0px 1px 5px #585858, 3px 3px 1px 5px rgba(0, 0, 0, 0.5)', borderRadius: '50%'}}/>
                                     <br/><br/>
                                     <div className="" style={{height:"80px"}}>
                                         <h1 className="title is-5 has-text-centered has-text-white">{c.name}</h1>
@@ -271,6 +251,8 @@ const HomePage = props => {
                         }
                         <div className="column"></div>
                     </div>
+                    <br/>
+                    <h1 className="subtitle has-text-white has-text-centered">Starting Episode 2</h1>
                 </div>
             </section>
 
