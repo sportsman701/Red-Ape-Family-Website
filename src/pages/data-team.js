@@ -25,7 +25,7 @@ const team = [
     }, {
         imageurl: member3,
         name: '2Chainz',
-        charge: 'Executive Produce',
+        charge: 'Executive Producer',
         link: '<a href="https://twitter.com/2chainz" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fab fa-twitter"></i></span></a>',
         info: `2 Chainz is the stage name of Atlanta rapper Tauheed Epps, once known as Tity Boi in the Atlanta-based Playaz Circle. His breakout year was in 2012, when he dropped his official debut, Based on a T.R.U. Story, for Def Jam. The album hit number one on the Billboard 200, and easily reached platinum status. 2 Chainz continued to dominate the charts throughout the next decade, consistently hitting the top ten with albums like 2017's Pretty Girls Like Trap Music and material from his 2020 record So Help Me God. In 2021, he became an Executive Producer and Partner of The Red Ape Family, a comedy series that is the world’s first animated show built around, and starring, NFTs.`
     }, {
