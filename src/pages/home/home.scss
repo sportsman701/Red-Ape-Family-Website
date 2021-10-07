@@ -28,3 +28,12 @@
     background: rgba(white, 0.05) !important;
     backdrop-filter: blur(8px);
 }
+
+.centered-mobile{
+    @media (max-width: 769px){
+        width: auto !important;
+        img{
+            width: 95% !important;
+        }
+    }
+}

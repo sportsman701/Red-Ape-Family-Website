@@ -23,8 +23,6 @@ import {set_section} from 'redux/actions/navbarActions';
 
 import './home.scss';
 
-console.log([...teamData].splice(0, 5));
-
 
 const HomePage = props => {
 
@@ -51,7 +49,7 @@ const HomePage = props => {
 
                 case "ROADMAP":
                     y = roadMapSection.current.scrollIntoView()
-                    // window.scrollBy(0, -45);
+                    window.scrollBy(0, -45);
                     break;
 
                 case "TEAM":
@@ -71,16 +69,17 @@ const HomePage = props => {
     return (
         <div>
 
-            <section className="hero is-large banner-home" ref={homeSection}>
+            <section className="hero is-medium banner-home" ref={homeSection}>
                 <div className="hero-body bg-gradient">
+                <div className="has--white">
+                    <div className="centered-mobile" style={{width: "250px"}}>
+                        <figure className="image">
+                            <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
+                        </figure>
+                    </div>
+                </div>
                     <div className="container">
-                        <div className="columns">
-                            <div className="column is-2">
-                                <figure className="image">
-                                    <img src={titleImg} alt="" width="350px" style={{transform: 'rotate(-15deg)'}}/>
-                                </figure>
-                            </div>
-                        </div>
+
 
                         <div className="columns is-vcentered  px-3">
                             <div className="column has-text-centered">
@@ -104,7 +103,7 @@ const HomePage = props => {
             </section>
 
             {/* mint section*/}
-            <section className="has-background-primary py-6">
+            <section className="has-background-primary py-6 px-3">
                 <div className="container">
 
                     <div className="columns is-vcentered">

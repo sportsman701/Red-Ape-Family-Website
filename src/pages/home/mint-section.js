@@ -35,14 +35,14 @@ const Form = props => {
     const getWebData = async () => {
         if(props.wallet.connectedToOperatingNetwork){
             let webData = null;
-            console.log(await erc_contract.methods.webData(props.wallet.currentAccount).call());
+            // console.log(await erc_contract.methods.webData(props.wallet.currentAccount).call());
             try {
                 webData = await erc_contract.methods.webData(props.wallet.currentAccount).call();
                 webData = {
                     ...webData,
                     mintsLeft: webData.maxMint - webData.userMints
                 }
-                console.log(webData);
+                // console.log(webData);
             } catch (e) {
                 console.log('ERROR CONSULTING DATA', e);
             }finally{
