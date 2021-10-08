@@ -65,6 +65,10 @@ const Navbar = props => {
                         Team
                     </Link>
 
+                    <Link to="/stream" className="has-text-white navbar-item has-text-centered-mobile" onClick={ e => {onBurgerIClicked(e)}}>
+                        Stream
+                    </Link>
+
 
                 </div>
 
