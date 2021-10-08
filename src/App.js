@@ -12,6 +12,7 @@ import Footer from 'components/commons/footer';
 import HomePage from 'pages/home';
 import TeamPage from 'pages/team';
 import FaqPage from 'pages/faq';
+import Stream from 'pages/stream';
 import 'scss/main.scss';
 
 import {initWeb3} from './web3';
@@ -34,6 +35,10 @@ const App = () => {
 
                 <Route exact path="/team">
                     <TeamPage/>
+                </Route>
+
+                <Route exact path="/stream">
+                    <Stream/>
                 </Route>
 
                 {/*<Route exact path="/faq">

@@ -111,7 +111,7 @@ const Form = props => {
                 <div class="modal-background"></div>
                 <div class="modal-content">
                     <figure class="image is-16by9">
-                        <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/kuWPm0w1bfE" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/kuWPm0w1bfE" frameborder="0" allowFullscreen></iframe>
                     </figure>
                 </div>
                 <button class="modal-close is-large" aria-label="close" onClick={e => setVideoOpen(false)}></button>

@@ -78,16 +78,15 @@ const HomePage = props => {
                         </figure>
                     </div>
                 </div>*/}
-                    <div className="container is-flex-grow-1 is-flex is-justify-content-flex-end is-align-items-flex-end" style={{width: '100%'}}>
+                    <div className="container is-flex-grow-1 is-flex is-flex-direction-column is-justify-content-flex-end" style={{width: '100%'}}>
 
 
                         <div className="columns is-vcentered  px-3" style={{transform: 'translateY(-50px)'}}>
-
+                            <div className="column"></div>
                             <div className="column  has-text-centered">
 
                                 <a href="https://discord.gg/XtsPjy5f" target="_blank" className="button is-cpurple has-text-white is-size-4 is-rounded has-font-audiowide">
                                     <strong>JOIN DISCORD</strong></a>
-
                             </div>
                         </div>
                     </div>
