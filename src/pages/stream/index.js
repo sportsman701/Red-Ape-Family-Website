@@ -1,18 +1,17 @@
-import useEffect from 'react';
+import {useEffect} from 'react';
+
+const fetchEpisodes = async () => {
+    // const res = await fetch('https://drive.google.com/uc?export=view&id=1_ySSZ1hdgTM1oQMY6beXW7UonSHmJyoh');
+    // console.log(res);
+}
 
 const Stream = props => {
 
-    // useEffect(
-    //     () => {
-    //
-    //         // const fetchEpisodes = async () => {
-    //         //     const res = await fetch('https://www.googleapis.com/drive/v2/files/1_ySSZ1hdgTM1oQMY6beXW7UonSHmJyoh');
-    //         // }
-    //
-    //         // fetchEpisodes();
-    //
-    //     }, []
-    // );
+    useEffect(
+        () => {
+            fetchEpisodes();
+        }, []
+    );
 
     return(
         <div>
