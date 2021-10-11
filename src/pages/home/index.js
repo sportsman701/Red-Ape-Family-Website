@@ -187,9 +187,9 @@ const HomePage = props => {
                     </div>
                     <br/><br/>
                     <div className="columns is-multiline px-3">
-                        <div className="column"></div>
+                        
                         {
-                            [...teamData].splice(5, 4).map( (t, i) =>
+                            [...teamData].splice(5, 5).map( (t, i) =>
                                 <div className="column has-text-centered" key={i}>
 
 
@@ -207,7 +207,7 @@ const HomePage = props => {
                                 </div>
                             )
                         }
-                        <div className="column"></div>
+
                     </div>
 
                 </div>

@@ -7,7 +7,8 @@ import {
     member6,
     member7,
     member8,
-    member9
+    member9,
+    member10
 } from 'images';
 
 const team = [
@@ -72,6 +73,12 @@ const team = [
         name: 'Zaini Media',
         charge: 'Creative Studio',
         link: '<a href="http://www.zainimedia.com/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fal fa-globe"></i></span></a>',
+    } , {
+        sortId: 10,
+        imageurl: member10,
+        name: 'Crypto Family',
+        charge: 'Blockchain Team',
+        link: '<a href="https://www.cryptofamily.tech/" target="_blank"><span class="icon is-size-2 has-text-white"><i class="fal fa-globe"></i></span></a>',
     }
 ];
 

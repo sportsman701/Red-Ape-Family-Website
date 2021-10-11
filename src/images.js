@@ -10,6 +10,7 @@ import member6Png from 'media/member6.png';
 import member7Png from 'media/member7.png';
 import member8Png from 'media/member8.png';
 import member9Png from 'media/member9.png';
+import member10Png from 'media/cryptofamily.svg';
 
 import cast1Png from 'media/cast1.png';
 import cast2Png from 'media/cast2.png';
@@ -36,6 +37,7 @@ export const member6 = member6Png;
 export const member7 = member7Png;
 export const member8 = member8Png;
 export const member9 = member9Png;
+export const member10 = member10Png;
 
 //team cast
 export const ape1 = cast1Png;
