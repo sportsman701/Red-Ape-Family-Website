@@ -12,7 +12,7 @@ import {
 const cast = [
     {
         imageurl: ape1,
-        name: "Chuky",
+        name: "Chucky",
         discord: "BAYC #6614",
         link: '<a href="https://opensea.io/assets/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/6614" target="_blank"><span class="icon"><img src="'+ opensea +'"></span></a>',
 
