@@ -125,33 +125,34 @@ const Form = props => {
 
                 <br/>
                 <br/>
-
-                {
-                    props.wallet.currentAccount ? (
-                        props.wallet.connectedToOperatingNetwork ?
-                            <div>
-                                {
-                                    webData == null ?
-                                        null
-                                    :
-                                        <div className="mb-4">
-                                            <h1 className="subtitle mb-0 has-text-white has-text-weight-bold">Your mints: {webData.userMints}</h1>
-                                            <small className="has-text-white has-text-weight-bold"> NFT's left: {webData.leftNFT}</small>
-                                        </div>
-                                }
-                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
-                                <button className={`button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4 ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
-                                <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
-                            </div>
-                        :
-                            <button type="button" className="button is-cyellow" onClick={e => props.request_change_network(1)}>
-                                Switch to ETH Mainnet
-                            </button>
-                    ) : (
-                        <button type="button" className="button is-cyellow" onClick={async e => await props.request_connection()}>
-                            Connect wallet
-                        </button>
-                    )
+|
+                {      <h1 className="title has-text-warning is-4">Minting for episode 1 has ended</h1>
+                    // // props.wallet.currentAccount
+                    // ? (
+                    //     props.wallet.connectedToOperatingNetwork ?
+                    //         <div>
+                    //             {
+                    //                 webData == null ?
+                    //                     null
+                    //                 :
+                    //                     <div className="mb-4">
+                    //                         <h1 className="subtitle mb-0 has-text-white has-text-weight-bold">Your mints: {webData.userMints}</h1>
+                    //                         <small className="has-text-white has-text-weight-bold"> NFT's left: {webData.leftNFT}</small>
+                    //                     </div>
+                    //             }
+                    //             <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onDecreaseClicked} disabled={ Number(formik.values.mintQuantity) == 1}>-</button> &nbsp;
+                    //             <button className={`button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4 ${props.txReducer.MINT_TX.loading ? 'is-loading' : ''} `} type="submit" disabled={!props.wallet.connectedToOperatingNetwork || !(webData && webData.mintsLeft > 0)} >MINT {formik.values.mintQuantity}</button> &nbsp;
+                    //             <button className="button has-font-audiowide is-cyellow is-rounded has-text-black has-text-weight-bold is-size-4" type="button" style={{height: '', width: '40px'}} onClick={onIncreaseClicked} disabled={ (webData && webData.mintsLeft == formik.values.mintQuantity) }>+</button>
+                    //         </div>
+                    //     :
+                    //         <button type="button" className="button is-cyellow" onClick={e => props.request_change_network(1)}>
+                    //             Switch to ETH Mainnet
+                    //         </button>
+                    // ) : (
+                    //     <button type="button" className="button is-cyellow" onClick={async e => await props.request_connection()}>
+                    //         Connect wallet
+                    //     </button>
+                    // )
 
                 }
 
