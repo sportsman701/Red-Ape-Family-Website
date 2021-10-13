@@ -160,7 +160,7 @@ const Form = props => {
                 <br/>
                 <br/>
                 <p className="has-text-centered has-text-weight-bold has-text-white has-font-audiowide">
-                    MAXIMUM OF 5 TOKENS PER WALLET
+                    MAXIMUM OF 10 TOKENS PER WALLET
                     <br/>
                     SUPPORTED WALLET: METAMASK
                     <br/><br/>
